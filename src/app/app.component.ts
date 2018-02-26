@@ -1,4 +1,4 @@
-iimport { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from './data.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { DataService } from './data.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-eexport class AppComponent {
+export class AppComponent {
   objectKeys = Object.keys;
   cryptos: any;
   

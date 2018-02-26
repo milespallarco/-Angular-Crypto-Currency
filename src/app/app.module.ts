@@ -1,6 +1,11 @@
-// Other imports removed for brevity
-import { DataService } from './data.service';         // Add this
-import { HttpClientModule } from '@angular/common/http';    // Add this
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
+import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -8,9 +13,9 @@ import { HttpClientModule } from '@angular/common/http';    // Add this
   ],
   imports: [
     BrowserModule,
-    HttpClientModule                           // Add this
+    HttpClientModule
   ],
-  providers: [DataService],                    // Add this
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
