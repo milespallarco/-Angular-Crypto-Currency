@@ -6,10 +6,20 @@ import { DataService } from './data.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+eexport class AppComponent {
   objectKeys = Object.keys;
   cryptos: any;
   
-  // other code removed for brevity
+  constructor(private _data: DataService) {
+
+  }
+
+  ngOnInit() {
+    this._data.getPrices()
+      .subscribe(res => {
+        this.cryptos = res;
+        //console.log(res);
+      });
+  }
 
 }
