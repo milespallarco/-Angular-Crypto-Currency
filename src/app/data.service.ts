@@ -5,6 +5,13 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService {
 
-  constructor() { }
+  result:any;
+
+  constructor(private _http: HttpClient) {}
+
+  getPrices() {
+    return this._http.get("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,IOT&tsyms=USD")
+      .map(result => this.result = result);
+  }
 
 }
